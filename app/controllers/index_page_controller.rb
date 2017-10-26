@@ -1,0 +1,2 @@
+class IndexPageController < ApplicationController
+end
