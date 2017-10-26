@@ -1,0 +1,2 @@
+class ItemMath < ApplicationRecord
+end
