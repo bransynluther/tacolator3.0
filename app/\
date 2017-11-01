@@ -11,7 +11,7 @@
             Soft Taco
             </h6>
          </div>
-         <div class='col-md-2 center-buttons'>
+         <div class='col-md-3 center-buttons'>
              <h6>
              Hard Taco
             </h6>
@@ -133,10 +133,7 @@
 
         </div>
     </div>
-    <br>
-    <div class='row'>
-      <div class='offset-md-4 col-md-4'>
+    <div class='row'
         <button type="button" class="btn btn-success">Calulate</button>
-      </div>
     </div>
 </div>
