@@ -1,0 +1,2 @@
+class ItemTotal < ApplicationRecord
+end
