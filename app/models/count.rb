@@ -3,6 +3,6 @@ class Count < ApplicationRecord
   belongs_to :menu_item
 
   def get_calories
-   self.count * self.menu_item.calories
+   (self.menu_item.calories * self.count)
   end
 end
