@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20171113235116) do
     t.integer "menu_item_id"
   end
 
+
   create_table "item_maths", force: :cascade do |t|
     t.integer "item_id"
     t.integer "total_id"
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(version: 20171113235116) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
 
   create_table "items", force: :cascade do |t|
     t.string "title"
