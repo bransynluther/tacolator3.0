@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  totalprice: 1.5
+  totalcalories: 1
+
+two:
+  totalprice: 1.5
+  totalcalories: 1
