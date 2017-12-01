@@ -21,9 +21,10 @@ class ItemTotal < ApplicationRecord
          count_object = counts.find_by_menu_item_id(item_id).decrement(:count)
 
          count_object.save!
-      else
+       else
         counts.find_by_menu_item_id(item_id).delete
        end
       end
      end
- end
+
+    end
