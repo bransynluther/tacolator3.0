@@ -4,139 +4,29 @@
           <h1> Welcome to Tacolator3.0 </h1>
       </div>
     </div>
+    <% @menu_item.each_slice(3) do |f| %>
  <div class='offset-md-3 col-md-8 above-row-spacing'>
-    <div class='row center-col'>
-        <div class='col-md-3 center-buttons'>
+     <div class='row center-col'>
+         <div class='offset-md-3 col-md-3 center-buttons'>
+            <% f.each do |j| %>
             <h6>
-            Soft Taco
-            </h6>
-         </div>
-         <div class='col-md-2 center-buttons'>
-             <h6>
-             Hard Taco
+                <%= j.name %>
             </h6>
         </div>
-        <div class='col-md-3 center-buttons'>
-             <h6>
-            Cheesy Locos Tacos
-            </h6>
-        </div>
+        <% end %>
      </div>
  </div>
- <div class='offset-md-3 col-md-9 above-row-spacing'>
-    <div class='row center-col'>
+ <div class='col-md-9 above-row-spacing'>
+     <div class='row center-col'>
+         <% f.each do |i| %>
         <div class='col-md-2 picture-spacing'>
-            <%=link_to(image_tag("TacoBellSoftTaco.jpg", class: 'image-responsive'),
+            <%=link_to(image_tag(i.images, class: 'image-responsive'),
                        size:"10x10", alt: "example image", value:"200")%>
-                   <br>
         <div class="center-buttons">
             <h6>Calories:200 Price:1.89</h6>
         </div>
-         </div>
-         <div class='col-md-2 picture-spacing'>
-             <%=link_to(image_tag("Tbellcrunchy1.JPG", class: 'image-responsive'),
-                        size:"10x10", alt: "example image")%>
-          <div class="center-buttons">
-              <h6>Calories:200 Price:1.89</h6>
         </div>
-        </div>
-        <div class='col-md-2 picture-spacing'>
-            <%=link_to(image_tag("cheesylocos.jpg", class: 'image-responsive'),
-                       size:"10x10", alt: "example image")%>
-                   <div class="center-buttons">
-
-        </div>
-            <h6>Calories:200 Price:1.89</h6>
-        </div>
-     </div>
- </div>
-
- <div class='offset-md-3 col-md-8 above-row-spacing'>
-    <div class='row center-col'>
-        <div class='col-md-3 center-buttons'>
-            <h6>
-           Firey Locos Tacos
-            </h6>
-         </div>
-         <div class='col-md-3 center-buttons'>
-             <h6>
-                Smothered Burrito
-            </h6>
-        </div>
-        <div class='col-md-3 center-buttons'>
-             <h6>
-             Cantina Burrito
-            </h6>
-        </div>
-     </div>
- </div>
- <div class='offset-md-3 col-md-9 above-row-spacing'>
-    <div class='row center-col'>
-        <div class='col-md-2 picture-spacing'>
-            <%=link_to(image_tag("fireylocos.jpg", class: 'image-responsive'),
-                       size:"10x10", alt: "example image")%>
-    <h6>Calories:200 Price:1.89</h6>
-
-         </div>
-         <div class='col-md-2 picture-spacing'>
-             <%=link_to(image_tag("smothered.jpeg", class: 'image-responsive'),
-                        size:"10x10", alt: "example image")%>
-    <h6>Calories:200 Price:1.89</h6>
-
-        </div>
-        <div class='col-md-2 picture-spacing'>
-            <%=link_to(image_tag("cantina.jpg", class: 'image-responsive'),
-                       size:"10x10", alt: "example image")%>
-    <h6>Calories:200 Price:1.89</h6>
-
-        </div>
-     </div>
- </div>
-
- <div class='offset-md-3 col-md-8 above-row-spacing'>
-    <div class='row center-col'>
-        <div class='col-md-3 center-buttons'>
-            <h6>
-         Nacho Griller
-            </h6>
-         </div>
-         <div class='col-md-3 center-buttons'>
-             <h6>
-         Crunch Wrap Supreme
-            </h6>
-        </div>
-        <div class='col-md-3 center-buttons'>
-             <h6>
-                Chicken Quesadilla
-            </h6>
-        </div>
-     </div>
- </div>
- <div class='offset-md-3 col-md-9 above-row-spacing'>
-    <div class='row center-col'>
-        <div class='col-md-2 picture-spacing'>
-            <%=link_to(image_tag("nachogriller.jpg", class: 'image-responsive'),
-                       size:"10x10", alt: "example image")%>
-                       <h6>Calories:200 Price:1.89</h6>
-
-         </div>
-         <div class='col-md-2 picture-spacing'>
-             <%=link_to(image_tag("crunchwrap.jpeg", class: 'image-responsive'),
-                        size:"10x10", alt: "example image")%>
-    <h6>Calories:200 Price:1.89</h6>
-
-        </div>
-        <div class='col-md-2 picture-spacing'>
-            <%=link_to(image_tag("ques.jpg", class: 'image-responsive'),
-                       size:"10x10", alt: "example image")%>
-    <h6>Calories:200 Price:1.89</h6>
-
-        </div>
-    </div>
+    <% end %>
     <br>
-    <div class='row'>
-      <div class='offset-md-4 col-md-4'>
-        <button type="button" class="btn btn-success">Calulate</button>
-      </div>
-    </div>
+    <% end %>
 </div>

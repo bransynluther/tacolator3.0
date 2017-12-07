@@ -1,12 +1,14 @@
 <h1> WOWZERS </h1>
 
-
+<div class='container'>
   <% @menu_item.each do |f| %>
     <%= f.name %>
     <%= f.price %>
     <%= f.calories %>
+    <%= f.images %>
     <br>
-  <% end %>
+<% end %>
+</div>
 
 
 
