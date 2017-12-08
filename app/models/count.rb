@@ -7,6 +7,6 @@ class Count < ApplicationRecord
   end
 
   def get_price
-   menu_item.price * count * 100
+   menu_item.price * count
   end
 end

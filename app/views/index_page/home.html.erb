@@ -1,13 +1,15 @@
-<div class='container-fluid'>
+<div class='container'>
     <div class='row center-col'>
       <div class='offset-md-4 col-md-4'>
           <h1> Welcome to Tacolator3.0 </h1>
+          <h1> <%= @total_cals.to_s + ' calories' %> </h1>
+          <h1> <%= '$ %.2f'% @total_price %> </h1>
       </div>
     </div>
     <% @menu_item.each_slice(3) do |f| %>
- <div class='offset-md-3 col-md-8 above-row-spacing'>
-     <div class='row center-col'>
-         <div class='offset-md-3 col-md-3 center-buttons'>
+ <div class='col-md-12'>
+     <div class='row'>
+         <div class='offset-md-3 col-md-3'>
             <% f.each do |j| %>
             <h6>
                 <%= j.name %>
@@ -16,17 +18,28 @@
         <% end %>
      </div>
  </div>
- <div class='col-md-9 above-row-spacing'>
-     <div class='row center-col'>
+ <div class='col-md-12'>
+     <div class='row'>
          <% f.each do |i| %>
-        <div class='col-md-2 picture-spacing'>
-            <%=link_to(image_tag(i.images, class: 'image-responsive'),
-                       size:"10x10", alt: "example image", value:"200")%>
+        <div class='offset-md-1 col-md-3'>
+            <%=link_to(image_tag(i.images, class: 'image-responsive',
+                       size:"10x10", alt: "example image"),
+                       action: 'get_increment', id: i.id)%>
         <div class="center-buttons">
-            <h6>Calories:200 Price:1.89</h6>
+            <h6>   <%=i.calories %>  </h6>
+            <h6>   <%=i.price %>  </h6>
         </div>
         </div>
     <% end %>
-    <br>
-    <% end %>
-</div>
+<% end %>
+<br>
+     </div>
+     <br><br>
+     <div class='container'>
+         <% @session_id.counts.order(:menu_item_id).each do |i| %>
+             <%= i.menu_item.name %>
+             <%= 'x' + i.count.to_s %>
+             <%= link_to('remove', action: 'get_decrement', id: i.menu_item_id)%>
+             <br>
+        <% end %>
+    </div>

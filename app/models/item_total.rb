@@ -8,6 +8,7 @@ class ItemTotal < ApplicationRecord
                                 self.id)
     else
     count_object = counts.find_by_menu_item_id(item_id).increment(:count)
+    count_object.save!
     end
 
     count_object.save!
