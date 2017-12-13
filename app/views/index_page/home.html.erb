@@ -8,7 +8,7 @@
  <div class='col-md-12'>
      <div class='row'>
          <% f.each do |i| %>
-             <div class='offset-md-1 col-md-2 col-spacing-under bocks'>
+             <div class='col-md-3 col-spacing-under bocks'>
                  <%=i.name %>
                  <br>
             <%=link_to(image_tag(i.images, class: 'image-responsive',
@@ -24,7 +24,7 @@
      </div>
      <div class='container'>
          <div class='row'>
-                 <div class='offset-md-3 col-md-3 bocks'>
+                 <div class='offset-md-3 col-md-5 bocks'>
                   <% @session_id.counts.order(:menu_item_id).each do |i| %>
                   <%= i.menu_item.name %>
                   <%= 'x' + i.count.to_s %>
