@@ -4,8 +4,11 @@
           <h2> Welcome to Tacolator3.0 </h2>
                </div>
     </div>
+    <div class='bocks2'>
+        <h4>Click On A Menu Item's Image To Add It To Your Cart </h4>
+        </div
     <% @menu_item.each_slice(4) do |f| %>
- <div class='col-md-12'>
+        <div class='col-md-12'>
      <div class='row'>
          <% f.each do |i| %>
              <div class='col-md-3 col-spacing-under bocks'>
@@ -24,7 +27,8 @@
      </div>
      <div class='container'>
          <div class='row'>
-                 <div class='offset-md-3 col-md-5 bocks'>
+             <div class='offset-md-2 col-md-5 bocks'>
+                 <h3> Cart </h3>
                   <% @session_id.counts.order(:menu_item_id).each do |i| %>
                   <%= i.menu_item.name %>
                   <%= 'x' + i.count.to_s %>
@@ -33,7 +37,8 @@
                 <% end %>
                  </div>
                  <div class ='col-md-4 bocks'>
-            <br>
+                     <br>
+                     <br>
          <h3> <%='Total Calories: ' + @total_cals.to_s %> </h3>
          <br>
          <h3> <%= 'Total Price: $ %.2f'% @total_price %> </h3>

@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .col-spacing-under{
-  margin-bottom:35px;
+  margin-bottom:15px;
 }
 .bocks{
 border: 25px solid #ef1897 ;
@@ -12,6 +12,10 @@ font-weight: bold ;
 text-align: center;
 
 }
+.bocks2{
+color:indigo;
+text-align: center;
+}
 .link-to-color{
 color: white;
 }
@@ -19,7 +23,7 @@ color: white;
   text-align: center;
 }
 .above-row-spacing{
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .center-buttons{
