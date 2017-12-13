@@ -28,7 +28,7 @@
                   <% @session_id.counts.order(:menu_item_id).each do |i| %>
                   <%= i.menu_item.name %>
                   <%= 'x' + i.count.to_s %>
-                  <%= link_to('remove', action: 'get_decrement', id: i.menu_item_id)%>
+                  <%= link_to('remove',class: 'link-to-color', action: 'get_decrement', id: i.menu_item_id)%>
                  <br>
                 <% end %>
                  </div>
