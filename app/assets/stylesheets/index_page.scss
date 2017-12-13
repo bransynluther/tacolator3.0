@@ -1,6 +1,14 @@
 // Place all the styles related to the index_page controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.col-spacing-under{
+  margin-bottom:35px;
+}
+.bocks{
+border: 25px solid #ef1897 ;
+background: indigo;
+color:yellow;
+}
 .center-col{
   text-align: center;
 }
@@ -19,8 +27,8 @@
 
 }
 .image-responsive{
- width:150px;
- height:150px;
+ width:130px;
+ height:130px;
 }
 .button-image-background{
  font-size: 270%;
